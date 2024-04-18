@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "scythe-expansion",
+	"version": "${version}",
+	"name": "Scythe Expansion",
+	"description": "Rewrite of Scythe Expansion",
+	"authors": [
+		"editdev"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/scythe-expansion/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.edit.scythe_expansion.ScytheExpansion"
+		],
+		"client": [
+			"net.edit.scythe_expansion.ScytheExpansionClient"
+		],
+		"fabric-datagen": [
+			"net.edit.scythe_expansion.ScytheExpansionDataGenerator"
+		]
+	},
+	"mixins": [
+		"scythe-expansion.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
