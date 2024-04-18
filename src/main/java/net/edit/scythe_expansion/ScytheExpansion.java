@@ -1,5 +1,6 @@
 package net.edit.scythe_expansion;
 
+import net.edit.scythe_expansion.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,7 +12,7 @@ public class ScytheExpansion implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		ModItems.registerModItems();
 		LOGGER.info("Hello Fabric world!");
 	}
 }
