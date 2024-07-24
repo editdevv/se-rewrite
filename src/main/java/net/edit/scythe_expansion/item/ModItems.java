@@ -14,10 +14,10 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-    public static final Item COCK = registerItem("cock_scythe", new Item(new FabricItemSettings()));
+    public static final Item WOODEN_SCYTHE = registerItem("wooden_scythe", new Item(new FabricItemSettings()));
 
-    private static void addItemsToIngredientTab(FabricItemGroupEntries entries){
-        entries.add(COCK);
+    private static void addItemsToWeaponTab(FabricItemGroupEntries entries){
+        entries.add(WOODEN_SCYTHE);
     }
 
     private static Item registerItem(String name, Item item) {
@@ -25,9 +25,9 @@ public class ModItems {
     }
 
     public static void registerModItems() {
-        ScytheExpansion.LOGGER.info("Registering items for " + ScytheExpansion.MOD_ID);
+        ScytheExpansion.LOGGER.info("Registering items...");
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientTab);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(ModItems::addItemsToWeaponTab);
     }
 
 
